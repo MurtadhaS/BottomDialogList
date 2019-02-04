@@ -4,7 +4,9 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.VISIBLE
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,7 +20,8 @@ class DialogBottomSheetFragment : BottomSheetDialogFragment() {
     var dismissOnItemClick: Boolean? = null
     var backgroundColor: Int? = null
     var textFontColor: Int? = null
-    var iconsColor:Int? = null
+    var iconsColor: Int? = null
+    var dialogMessage: String? = null
 
     lateinit var dialogItemList: MutableList<DialogItem>
     lateinit var itemsTitles: ArrayList<String>
@@ -47,6 +50,7 @@ class DialogBottomSheetFragment : BottomSheetDialogFragment() {
             backgroundColor = arguments?.getSerializable("backgroundColor") as? Int
             textFontColor = arguments?.getSerializable("fontColor") as? Int
             iconsColor = arguments?.getSerializable("iconsColor") as? Int
+            dialogMessage = arguments?.getSerializable("dialogMessage") as? String
 
             for (index in itemsTitles.indices) {
                 dialogItemList.add(DialogItem(
@@ -58,12 +62,19 @@ class DialogBottomSheetFragment : BottomSheetDialogFragment() {
                 })
             }
 
-            adapter = DialogListItemAdapter(getContext(), dialogItemList, textFontColor, backgroundColor,iconsColor)
+            adapter = DialogListItemAdapter(getContext(), dialogItemList, textFontColor, backgroundColor, iconsColor)
 
             val recyclerView = view.findViewById<RecyclerView>(R.id.recycler_user_lists)
+            val textViewMessage = view.findViewById<TextView>(R.id.text_dialog_title)
 
             recyclerView.setLayoutManager(LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false))
             recyclerView.setAdapter(adapter)
+
+            dialogMessage?.let {
+                textViewMessage.visibility = VISIBLE
+                textViewMessage.text = it
+                textFontColor?.let { textViewMessage.setTextColor(it) }
+            }
 
         }
     }
@@ -129,5 +140,9 @@ class DialogBottomSheetFragment : BottomSheetDialogFragment() {
             return this
         }
 
+        fun setDialogMessage(message: String): Builder {
+            arguments.putSerializable("dialogMessage", message)
+            return this
+        }
     }
 }
