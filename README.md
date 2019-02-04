@@ -10,12 +10,13 @@ Simply initalize the icons, titles & the onClick handlers list and use the build
 
 
             BottomDialogList.Builder()
-                .setItemsIcons(icons)
-                .setItemsTitles(titles)
-                .setItemsClickListeners(events)
-                .setIconsColorTint(getColor(R.color.abc_hint_foreground_material_light))
-                .setTextFontColor(getColor(R.color.abc_hint_foreground_material_light))
-                .setBackgroundColor(getColor(R.color.abc_hint_foreground_material_light))
-                .setDialogMessage("Please select the options you want")
-                .show(getSupportFragmentManager())
+                            .setItemsIcons(icons)
+                            .setItemsTitles(titles)
+                            .setItemsClickListeners(events)
+                            .setBackgroundColor(COLOR)
+                            .setTextFontColor(COLOR)
+                            .setIconsColorTint(COLOR)
+                            .setDismissOnItemClicked(true)
+                            .setDialogMessage("Select One Option")
+                            .show(getSupportFragmentManager())
        

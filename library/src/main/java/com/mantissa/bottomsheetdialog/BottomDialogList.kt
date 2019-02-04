@@ -26,7 +26,7 @@ class BottomDialogList : BottomSheetDialogFragment() {
     lateinit var dialogItemList: MutableList<DialogItem>
     lateinit var itemsTitles: ArrayList<String>
     lateinit var itemsIcons: ArrayList<Int>
-    lateinit var clickEvents: ArrayList<(v: View) -> Unit>
+    lateinit var clickEvents: ArrayList<View.OnClickListener>
 
     lateinit var adapter: DialogListItemAdapter
 
@@ -45,19 +45,20 @@ class BottomDialogList : BottomSheetDialogFragment() {
 
             itemsIcons = getArguments()!!.getIntegerArrayList("itemsIcons")
             itemsTitles = getArguments()!!.getStringArrayList("itemsTitles")
-            clickEvents = getArguments()!!.getSerializable("itemsClickEvents") as ArrayList<(v: View) -> Unit>
+            clickEvents = getArguments()!!.getSerializable("itemsClickEvents") as ArrayList<View.OnClickListener>
             dismissOnItemClick = getArguments()?.getBoolean("dismissOnItemClicked")
             backgroundColor = arguments?.getSerializable("backgroundColor") as? Int
             textFontColor = arguments?.getSerializable("fontColor") as? Int
             iconsColor = arguments?.getSerializable("iconsColor") as? Int
             dialogMessage = arguments?.getSerializable("dialogMessage") as? String
 
+
             for (index in itemsTitles.indices) {
                 dialogItemList.add(DialogItem(
                     getContext()?.getResources()?.getDrawable(itemsIcons[index]),
                     itemsTitles[index]
                 ) { view1 ->
-                    clickEvents[index].invoke(view1)
+                    clickEvents[index].onClick(view)
                     if (dismissOnItemClick!!) dismiss()
                 })
             }
@@ -115,7 +116,7 @@ class BottomDialogList : BottomSheetDialogFragment() {
             return this
         }
 
-        fun setItemsClickListeners(clickListener: ArrayList<(v: View) -> Unit>): Builder {
+        fun setItemsClickListeners(clickListener: ArrayList<View.OnClickListener>): Builder {
             arguments.putSerializable("itemsClickEvents", clickListener)
             return this
         }
