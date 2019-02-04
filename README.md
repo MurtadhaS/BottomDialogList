@@ -19,4 +19,20 @@ Simply initalize the icons, titles & the onClick handlers list and use the build
                             .setDismissOnItemClicked(true)
                             .setDialogMessage("Select One Option")
                             .show(getSupportFragmentManager())
+                            
+ You can initialize and add elements to the events list as below:
+ 
+ ## Java 8
+ 
+            ArrayList<View.OnClickListener> events = new ArrayList<>();
+            events.add(v -> {
+            Toast.makeText(this, "Hello World 1", Toast.LENGTH_LONG).show();
+            });
+ 
+ ## Kotlin
+ 
+            val events: ArrayList<View.OnClickListener> = ArrayList()
+            events.add(View.OnClickListener { v ->
+            Toast.makeText(this, "Hello World 1", Toast.LENGTH_LONG).show()
+            })
        
