@@ -47,7 +47,6 @@ class MainActivity : AppCompatActivity() {
                 .setItemsTitles(titles)
                 .setItemsClickListeners(events)
                 .setIconsColorTint(getColor(R.color.abc_hint_foreground_material_light))
-                .setDialogMessage("Please select the options you want")
                 .show(getSupportFragmentManager())
         }
     }
