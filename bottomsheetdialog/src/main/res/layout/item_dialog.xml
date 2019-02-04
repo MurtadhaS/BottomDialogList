@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+                name="actionListener"
+                type="com.mantissa.bottomsheetdialog.adapters.DialogListItemAdapter"/>
+
+        <variable
+                name="dialogItem"
+                type="com.mantissa.bottomsheetdialog.models.DialogItem"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="@{dialogItem.clickListener==null?false:true}"
+                android:focusable="@{dialogItem.clickListener==null?false:true}"
+                android:onClick="@{(view)->dialogItem.clickListener.onClick(view)}">
+
+
+            <ImageView
+                    android:id="@+id/image_item_icon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@{dialogItem.iconId}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                    android:id="@+id/text_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@{dialogItem.listItemName}"
+
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/image_item_icon"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            <!--android:textColor="@color/gray"-->
+
+            <ImageView
+                    android:id="@+id/text_item_arrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--android:src="@drawable/ic_chevron_right_black_24dp"-->
+    </androidx.cardview.widget.CardView>
+</layout>
