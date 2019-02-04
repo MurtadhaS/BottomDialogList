@@ -1,8 +1,8 @@
-# BottomDialogList
+# Bottom Dialog List
 
 Easy to build bottomsheet menu with flexible handlers.
 
-
+<img src="https://raw.githubusercontent.com/MurtadhaS/BottomDialogList/master/showcase/image_1.png" width=200/>
 
 # How do I use it?
 
