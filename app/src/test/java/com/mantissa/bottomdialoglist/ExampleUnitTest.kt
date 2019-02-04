@@ -1,4 +1,4 @@
-package com.mantissa.dialogbottomsheet
+package com.mantissa.bottomdialoglist
 
 import org.junit.Test
 

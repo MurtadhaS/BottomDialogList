@@ -37,7 +37,7 @@ Simply initalize the icons, titles, onClick handlers list and use the builder wi
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            DialogBottomSheetFragment.Builder()
+            BottomDialogList.Builder()
                 .setItemsIcons(icons)
                 .setItemsTitles(titles)
                 .setItemsClickListeners(events)

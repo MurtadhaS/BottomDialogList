@@ -6,7 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.mantissa.dialogbottomsheet"
+        applicationId "com.mantissa.bottomdialoglist"
         minSdkVersion 17
         targetSdkVersion 28
         versionCode 1

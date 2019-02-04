@@ -1,4 +1,4 @@
-package com.mantissa.dialogbottomsheet
+package com.mantissa.bottomdialoglist
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.mantissa.dialogbottomsheet", appContext.packageName)
+        assertEquals("com.mantissa.bottomdialoglist", appContext.packageName)
     }
 }

@@ -1,11 +1,11 @@
-package com.mantissa.dialogbottomsheet
+package com.mantissa.bottomdialoglist
 
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.mantissa.bottomsheetdialog.DialogBottomSheetFragment
+import com.mantissa.bottomsheetdialog.BottomDialogList
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            DialogBottomSheetFragment.Builder()
+            BottomDialogList.Builder()
                 .setItemsIcons(icons)
                 .setItemsTitles(titles)
                 .setItemsClickListeners(events)

@@ -15,7 +15,7 @@ import com.mantissa.bottomsheetdialog.adapters.DialogListItemAdapter
 import com.mantissa.bottomsheetdialog.models.DialogItem
 import java.util.*
 
-class DialogBottomSheetFragment : BottomSheetDialogFragment() {
+class BottomDialogList : BottomSheetDialogFragment() {
 
     var dismissOnItemClick: Boolean? = null
     var backgroundColor: Int? = null
@@ -98,8 +98,8 @@ class DialogBottomSheetFragment : BottomSheetDialogFragment() {
             arguments = Bundle()
         }
 
-        fun show(fragmentManager: FragmentManager): DialogBottomSheetFragment {
-            val fragment = DialogBottomSheetFragment()
+        fun show(fragmentManager: FragmentManager): BottomDialogList {
+            val fragment = BottomDialogList()
             fragment.setArguments(arguments)
             fragment.show(fragmentManager, DIALOG_FRAGMENT_TAG)
             return fragment
