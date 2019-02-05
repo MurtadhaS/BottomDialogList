@@ -1,4 +1,5 @@
 # Bottom Dialog List
+[ ![Download](https://api.bintray.com/packages/murtadhas/BottomDialogList/BottomDialogList/images/download.svg) ](https://bintray.com/murtadhas/BottomDialogList/BottomDialogList/_latestVersion)
 
 Easy to build bottomsheet menu with flexible handlers.
 
