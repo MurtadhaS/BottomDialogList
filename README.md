@@ -3,7 +3,7 @@
 
 Easy to build bottomsheet menu with flexible handlers.
 
-<img src="https://raw.githubusercontent.com/MurtadhaS/BottomDialogList/master/showcase/image_1.png" width=200/>
+<img src="https://raw.githubusercontent.com/MurtadhaS/BottomDialogList/master/showcase/image_1.png" width=300/>
 
 # Download
 You can add the following line to your application build.gradle file dependencies to include the library:
