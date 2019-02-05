@@ -15,7 +15,7 @@ or you can use Maven
 
 ## Maven
 
-            <depenfordency>
+            <dependency>
             <groupId>com.mantissa.bottomdialoglist</groupId>
             <artifactId>BottomDialogList</artifactId>
             <version>1.0.1</version>
