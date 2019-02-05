@@ -14,7 +14,7 @@ or you can use Maven
 
 ## Maven
 
-            <dependency>
+            <depenfordency>
             <groupId>com.mantissa.bottomdialoglist</groupId>
             <artifactId>BottomDialogList</artifactId>
             <version>1.0.1</version>
@@ -54,4 +54,4 @@ Simply initalize the icons, titles & the onClick handlers list and use the build
             Toast.makeText(this, "Hello World 1", Toast.LENGTH_LONG).show()
             })
  
- You can refer for the app sample in the project for more info.
+ You can to the app sample in the project for more info.
