@@ -4,6 +4,23 @@ Easy to build bottomsheet menu with flexible handlers.
 
 <img src="https://raw.githubusercontent.com/MurtadhaS/BottomDialogList/master/showcase/image_1.png" width=200/>
 
+# Download
+You can add the following line to your application build.gradle file dependencies to include the library:
+ 
+## Gradle 
+             implementation 'com.mantissa.bottomdialoglist:BottomDialogList:1.0.1'
+
+or you can use Maven
+
+## Maven
+
+            <dependency>
+            <groupId>com.mantissa.bottomdialoglist</groupId>
+            <artifactId>BottomDialogList</artifactId>
+            <version>1.0.1</version>
+            <type>pom</type>
+            </dependency>
+
 # How do I use it?
 
 Simply initalize the icons, titles & the onClick handlers list and use the builder with the corresponding options:
@@ -19,6 +36,7 @@ Simply initalize the icons, titles & the onClick handlers list and use the build
                             .setDismissOnItemClicked(true)
                             .setDialogMessage("Select One Option")
                             .show(getSupportFragmentManager())
+                            
                             
  You can initialize and add elements to the events list as below:
  
