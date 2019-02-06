@@ -1,12 +1,13 @@
 package com.mantissa.bottomsheetdialog.adapters
 
 import android.content.Context
+import android.databinding.DataBindingUtil
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.RecyclerView
+
 import com.mantissa.bottomsheetdialog.R
 import com.mantissa.bottomsheetdialog.databinding.ItemDialogBinding
 import com.mantissa.bottomsheetdialog.models.DialogItem

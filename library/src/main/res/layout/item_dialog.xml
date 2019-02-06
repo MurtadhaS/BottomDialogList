@@ -12,12 +12,12 @@
                 type="com.mantissa.bottomsheetdialog.models.DialogItem"/>
     </data>
 
-    <androidx.cardview.widget.CardView
+    <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:foreground="?attr/selectableItemBackground">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:foreground="?attr/selectableItemBackground"
@@ -62,7 +62,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
         <!--android:src="@drawable/ic_chevron_right_black_24dp"-->
-    </androidx.cardview.widget.CardView>
+    </android.support.v7.widget.CardView>
 </layout>

@@ -24,9 +24,7 @@ or you can use Maven:
 
 # How do I use it?
 
-1. **You must migrate to [AndroidX](https://developer.android.com/jetpack/androidx/migrate) to use this library.**
-
-2. Add the following few lines to your application's build.gradle file in order to enable databinding which is used inside this library:
+1. Add the following few lines to your application's build.gradle file in order to enable databinding which is used inside this library:
 
             android {
                dataBinding {
@@ -34,7 +32,7 @@ or you can use Maven:
                     }
             }
 
-3. Simply initalize the icons, titles & the onClick handlers list and use the builder with the corresponding options:
+2. Simply initalize the icons, titles & the onClick handlers list and use the builder with the corresponding options:
 
 
             BottomDialogList.Builder()

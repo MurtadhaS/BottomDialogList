@@ -2,15 +2,17 @@ package com.mantissa.bottomsheetdialog
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.support.design.widget.BottomSheetDialogFragment
+import android.support.v4.app.FragmentManager
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.fragment.app.FragmentManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+
+
 import com.mantissa.bottomsheetdialog.adapters.DialogListItemAdapter
 import com.mantissa.bottomsheetdialog.models.DialogItem
 import java.util.*
@@ -102,7 +104,7 @@ class BottomDialogList : BottomSheetDialogFragment() {
         fun show(fragmentManager: FragmentManager): BottomDialogList {
             val fragment = BottomDialogList()
             fragment.setArguments(arguments)
-            fragment.show(fragmentManager, DIALOG_FRAGMENT_TAG)
+            fragment.show(fragmentManager , DIALOG_FRAGMENT_TAG)
             return fragment
         }
 

@@ -2,9 +2,9 @@ package com.mantissa.bottomdialoglist
 
 import android.os.Build
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.mantissa.bottomsheetdialog.BottomDialogList
 import java.util.*
 
