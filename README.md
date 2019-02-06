@@ -11,7 +11,7 @@ You can add the following line to your application build.gradle file dependencie
 ## Gradle 
              implementation 'com.mantissa.bottomdialoglist:BottomDialogList:1.0.1'
 
-or you can use Maven
+or you can use Maven:
 
 ## Maven
 
@@ -24,7 +24,17 @@ or you can use Maven
 
 # How do I use it?
 
-Simply initalize the icons, titles & the onClick handlers list and use the builder with the corresponding options:
+1. **You must migrate to AndroidX to use this library.**
+
+2. Add the following few lines to your application's build.gradle file in order to enable databinding which is used inside this library:
+
+            android {
+               dataBinding {
+                    enabled = true
+                    }
+            }
+
+3. Simply initalize the icons, titles & the onClick handlers list and use the builder with the corresponding options:
 
 
             BottomDialogList.Builder()
