@@ -9,7 +9,7 @@ Easy to build bottomsheet menu with flexible handlers.
 You can add the following line to your application build.gradle file dependencies to include the library:
  
 ## Gradle 
-             implementation 'com.mantissa.bottomdialoglist:BottomDialogList:1.0.1'
+             implementation 'com.mantissa.bottomdialoglist:BottomDialogList:1.0.2'
 
 or you can use Maven:
 
