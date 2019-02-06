@@ -24,7 +24,7 @@ or you can use Maven:
 
 # How do I use it?
 
-1. **You must migrate to AndroidX to use this library.**
+1. **You must migrate to [AndroidX](https://developer.android.com/jetpack/androidx/migrate) to use this library.**
 
 2. Add the following few lines to your application's build.gradle file in order to enable databinding which is used inside this library:
 
