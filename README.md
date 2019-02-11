@@ -18,7 +18,7 @@ or you can use Maven:
             <dependency>
             <groupId>com.mantissa.bottomdialoglist</groupId>
             <artifactId>BottomDialogList</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
             <type>pom</type>
             </dependency>
 
